@@ -45,19 +45,69 @@
         <li>Bagura</li>
         
     </ul>
+   
    </section>
-    </main>
+
+
+
    
 
+    <article>        
+        <h1>JavaScripts Events</h1>
+        <button onclick="document.body.style.backgroundColor= 'yellow'">Clic Yellow</button>
+        <button onclick="makeRed()"> Click Red</button>
+        <button id="blue-click">Click Blue</button>
+        <button id="green-click">Click Green</button>
+        <button id="pink-click">Click Pink</button>
+        <button id="gray-click">Click gray</button>
+        <button id="steelBlue-click">Click steelBlue</button>
 
-    <script src="dom.js"></script>
-    <script src="stylejs.js"></script>
+    </article>
+</main>
+
     <script>
+        function makeRed(){
+            document.body.style.backgroundColor= 'red';
+        }
+
+
+        // important option
+        const blueButton = document.getElementById('blue-click');
+        blueButton.onclick = makeBlue;
+        function makeBlue(){
+            document.body.style.backgroundColor = 'blue';
+        }
+
+        const greenButton = document.getElementById('green-click');
+        greenButton.onclick= function makeGreen(){
+            document.body.style.backgroundColor= 'green'
+        }
+
+        const pinkButton = document.getElementById('pink-click');
+        pinkButton.addEventListener('click', makePink);
+        function makePink(){
+            document.body.style.backgroundColor= "pink";
+        }
+        const grayButton = document.getElementById('gray-click');
+        grayButton.addEventListener('click', function makeGray(){
+            document.body.style.backgroundColor= 'gray'
+        })
+
+        // Most Important For JS DOM  Event Handler
+
+        document.getElementById('steelBlue-click').addEventListener('click', function(){
+            document.body.style.backgroundColor= 'steelblue';
+        })
+
+
         
        // const lists = document.getElementsByTagName('li');
        // for(const li of lists){
          //   console.log(li.innerText);
        // }
     </script>
+    <script src="dom.js"></script>
+    <script src="stylejs.js"></script>
+    
 </body>
 </html>

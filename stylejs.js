@@ -1,3 +1,6 @@
+
+/*
+
 console.log('Style by js')
 
 // style set by js
@@ -60,6 +63,7 @@ for(const section of sections){
     
 
 }
+*/
 
 
 
