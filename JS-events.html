@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-DOM-Event</title>
+</head>
+
+
+
+
+<body>
+    <h1 id="h1">JS Dom Event Handler</h1>
+    <button id="h1=changes">Click for Event</button>
+    <button id="hide-changes">Click for Event2</button>
+    <p id="text-from-input">Get and change from Input field >>>></p>
+    <input type="text" id="input-field"> 
+    <button id="submit-button">Submit</button>
+
+
+    
+
+<script>
+    document.getElementById('h1=changes').addEventListener('click', function(){
+        const h1Changes = document.getElementById('h1');
+        h1Changes.innerText = 'JS DOM Event Handler Check'
+    })
+    document.getElementById('hide-changes').addEventListener('click', function(){
+        const hide = document.getElementById('hide-changes');
+        document.body.style.backgroundColor= 'red';
+        hide.style.display = 'none';
+    })
+
+
+        document.getElementById('submit-button').addEventListener('click', function(){
+        const inputField = document.getElementById('input-field');
+        const inputText = inputField.value;
+        const p = document.getElementById('text-from-input');
+        p.innerText = inputText;
+        inputField.innerText = '';
+    })
+    
+
+
+
+
+
+</script>
+
+    <script src="jsEvent.js"></script>
+</body>
+</html>
